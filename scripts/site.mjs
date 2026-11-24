@@ -1,6 +1,6 @@
 export const site = {
   slug:'forum', name:'Tront Forum', description:'Long-running devlogs, build notes, and playtest threads.',
-  singular:'Topic', plural:'All topics', newLabel:'New topic on GitHub', theme:'light',
+  singular:'Topic', plural:'All topics', newLabel:'New topic on GitHub',
   indexContent({topics, esc, time, author, topicPath, counts}) {
     const sorted = topics.toSorted((a,b) => b.updatedAt.localeCompare(a.updatedAt));
     const categories = [...new Set(sorted.map(item => item.category.name))].sort();
